@@ -1,0 +1,3796 @@
+html,body,#main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+:root {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: inherit
+}
+
+h1,h2,h3,h4,h5,h6,p,figure {
+    margin: 0
+}
+
+body,input,textarea,select,button {
+    font-size: 12px;
+    font-family: sans-serif
+}
+
+#__framer-badge-container {
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    pointer-events: none;
+    z-index: 314159
+}
+
+.__framer-badge {
+    pointer-events: auto
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6h9Q.woff2) format("woff2");
+    unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2) format("woff2");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6h9Q.woff2) format("woff2");
+    unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2) format("woff2");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Medium.cyrillic-ext-M4WHNGTS.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Medium.cyrillic-JVU2PANX.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Medium.greek-ext-4KCQBEIZ.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Medium.greek-DPOQGN7L.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Medium.latin-ext-J4DBSW7F.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Medium.latin-Y3IVPL46.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Medium.vietnamese-PJV76O4P.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Regular.cyrillic-ext-CFTLRB35.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Regular.cyrillic-KKLZBALH.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Regular.greek-ext-ULEBLIFV.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Regular.greek-IRHSNFQB.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Regular.latin-ext-VZDUGU3Q.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Regular.latin-JLQMKCHE.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Regular.vietnamese-QK7VSWXK.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Thin.cyrillic-ext-BHDA65O4.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 100;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Thin.cyrillic-Q5IXHU2O.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 100;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Thin.greek-ext-VVOQA2NE.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 100;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Thin.greek-E3WNEUH6.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 100;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Thin.latin-ext-5RC4NRHN.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 100;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Thin.latin-GJ7CRGHG.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 100;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Thin.vietnamese-Z3Y7DPWO.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 100;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraLight.cyrillic-ext-7NWKXNAT.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 200;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraLight.cyrillic-IBWUD6RJ.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 200;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraLight.greek-ext-HUMDTRBU.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 200;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraLight.greek-ZLLHEEN3.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 200;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraLight.latin-ext-72JE5FGU.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 200;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraLight.latin-2JHDAFAQ.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 200;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraLight.vietnamese-VKRCA4VC.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 200;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Light.cyrillic-ext-G3OTPKE4.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 300;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Light.cyrillic-JO7ZJTP6.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 300;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Light.greek-ext-N63XCCK3.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 300;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Light.greek-5GVUXSXZ.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 300;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Light.latin-ext-RREJIMQ3.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 300;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Light.latin-EKF76FXR.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 300;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Light.vietnamese-GVC2UOFS.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 300;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-SemiBold.cyrillic-ext-C7KWUKA7.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-SemiBold.cyrillic-JWV7SOZ6.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-SemiBold.greek-ext-FBKSFTSU.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-SemiBold.greek-EQ3PSENU.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-SemiBold.latin-ext-ULRSO3ZR.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-SemiBold.latin-RDYY2AG2.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-SemiBold.vietnamese-ESQNSEQ3.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Bold.cyrillic-ext-XOTVL7ZR.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Bold.cyrillic-6LOMBC2V.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Bold.greek-ext-WXWSJXLB.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Bold.greek-YRST7ODZ.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Bold.latin-ext-BASA5UL3.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Bold.latin-UCM45LQF.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Bold.vietnamese-OEVJMXEP.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraBold.cyrillic-ext-7Q6SVIPE.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 800;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraBold.cyrillic-JSLPE6KW.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 800;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraBold.greek-ext-6OYGJJV7.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 800;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraBold.greek-SHW2FPC4.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 800;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraBold.latin-ext-A5DUFOP6.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 800;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraBold.latin-OW4UGSRU.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 800;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraBold.vietnamese-IBBC7NGV.woff2);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 800;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Black.cyrillic-ext-TU4ITVTR.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 900;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Black.cyrillic-JX7CGTYD.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 900;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Black.greek-ext-LS3GCBFI.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 900;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Black.greek-ZWCJHBP5.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 900;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Black.latin-ext-BZLEUMX6.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 900;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Black.latin-TETRYDF7.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 900;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Black.vietnamese-RXQCC3EJ.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 900;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ThinItalic.cyrillic-ext-2RGKWUBV.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 100;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ThinItalic.cyrillic-TDYIP5HV.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 100;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ThinItalic.greek-ext-WR4TIDYZ.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 100;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ThinItalic.greek-V3WZMSP7.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 100;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ThinItalic.latin-ext-TXFTJONQ.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 100;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ThinItalic.latin-RVEBKP6O.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 100;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ThinItalic.vietnamese-WCBPP4MD.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 100;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraLightItalic.cyrillic-ext-OVCHMVPD.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 200;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraLightItalic.cyrillic-BRDZE5UH.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 200;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraLightItalic.greek-ext-YV64YFFH.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 200;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraLightItalic.greek-EJVCLASM.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 200;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraLightItalic.latin-ext-2MHTM56A.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 200;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraLightItalic.latin-JB3CJMMM.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 200;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraLightItalic.vietnamese-3EJ3IQYS.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 200;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-LightItalic.cyrillic-ext-C2S5XS3D.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 300;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-LightItalic.cyrillic-E7CYPW5D.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 300;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-LightItalic.greek-ext-ROSAFPGE.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 300;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-LightItalic.greek-PAWWH37Z.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 300;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-LightItalic.latin-ext-N2Z67Z45.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 300;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-LightItalic.latin-SLSTLWEU.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 300;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-LightItalic.vietnamese-RLGM2D3Y.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 300;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Italic.cyrillic-ext-YDGMJOJO.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Italic.cyrillic-BFOVMAQB.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Italic.greek-ext-4KOU3AHC.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Italic.greek-OJTBJNE6.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Italic.latin-ext-H4B22QN6.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Italic.latin-2DWX32EN.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-Italic.vietnamese-TYMT6CKW.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-MediumItalic.cyrillic-ext-QYBZQ2NF.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 500;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-MediumItalic.cyrillic-ZHAJHZCC.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 500;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-MediumItalic.greek-ext-W5ABYGZR.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 500;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-MediumItalic.greek-RGNSYVNV.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 500;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-MediumItalic.latin-ext-7DZEPSAS.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 500;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-MediumItalic.latin-SKPQAMBJ.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 500;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-MediumItalic.vietnamese-23WIFZV7.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 500;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.cyrillic-ext-MEHHCDC3.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 600;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.cyrillic-YACNRNDE.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 600;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.greek-ext-GFL7KADI.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 600;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.greek-5W77OPRT.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 600;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.latin-ext-OYJJ2W6R.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 600;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.latin-KBLJMBDH.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 600;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.vietnamese-5ZFOV65G.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 600;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-BoldItalic.cyrillic-ext-PEYDHC3S.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 700;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-BoldItalic.cyrillic-7EIL6JWG.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 700;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-BoldItalic.greek-ext-3DJOYQMH.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 700;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-BoldItalic.greek-TJBTLTT7.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 700;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-BoldItalic.latin-ext-FVPCPRBJ.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 700;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-BoldItalic.latin-5ZFQS4XK.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 700;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-BoldItalic.vietnamese-W2625PGF.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 700;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraBoldItalic.cyrillic-ext-ACWDZ3VD.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 800;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraBoldItalic.cyrillic-ZKBSDAI2.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 800;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraBoldItalic.greek-ext-3CY5DPTP.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 800;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraBoldItalic.greek-YL5CC63W.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 800;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraBoldItalic.latin-ext-7IZFJI4D.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 800;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraBoldItalic.latin-O5HH4IX3.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 800;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-ExtraBoldItalic.vietnamese-UW3XUJOD.woff2);
+    font-display: swap;
+    font-style: italic;
+    font-weight: 800;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-BlackItalic.cyrillic-ext-TRM4ITYR.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 900;
+    unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-BlackItalic.cyrillic-FPHIQVZS.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 900;
+    unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-BlackItalic.greek-ext-JTGUUSP5.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 900;
+    unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-BlackItalic.greek-LUNA3RFO.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 900;
+    unicode-range: U+0370-03FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-BlackItalic.latin-ext-KU7ICFYH.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 900;
+    unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-BlackItalic.latin-FRVXWQSB.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 900;
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(https://app.framerstatic.com/Inter-BlackItalic.vietnamese-2Q7MQKJX.woff2);
+    font-display: block;
+    font-style: italic;
+    font-weight: 900;
+    unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB
+}
+
+@font-face {
+    font-family: Stardom;
+    src: url(https://framerusercontent.com/third-party-assets/fontshare/wf/55LJGATMQKPK2BTD7N2IXUHALPWNZDNS/GHNSWJKY6KQGQZNHIGVGKP3PVRORBVBW/NPPNOUBFWCNOP7IJUAHBBDRSDI2ZAE7F.woff2);
+    font-display: block;
+    font-style: normal;
+    font-weight: 400
+}
+
+@font-face {
+    font-family: DM Sans Placeholder;
+    src: local("Arial");
+    ascent-override:94.35%;descent-override:29.49%;line-gap-override:0%;size-adjust:105.14%}
+
+@font-face {
+    font-family: Inter Placeholder;
+    src: local("Arial");
+    ascent-override:90%;descent-override:22.43%;line-gap-override:0%;size-adjust:107.64%}
+
+[data-framer-component-type] {
+    position: absolute
+}
+
+[data-framer-component-type=Text] {
+    cursor: inherit
+}
+
+[data-framer-component-text-autosized] * {
+    white-space: pre
+}
+
+[data-framer-component-type=Text]>* {
+    text-align: var(--framer-text-alignment, start)
+}
+
+[data-framer-component-type=Text] span span,[data-framer-component-type=Text] p span,[data-framer-component-type=Text] h1 span,[data-framer-component-type=Text] h2 span,[data-framer-component-type=Text] h3 span,[data-framer-component-type=Text] h4 span,[data-framer-component-type=Text] h5 span,[data-framer-component-type=Text] h6 span {
+    display: block
+}
+
+[data-framer-component-type=Text] span span span,[data-framer-component-type=Text] p span span,[data-framer-component-type=Text] h1 span span,[data-framer-component-type=Text] h2 span span,[data-framer-component-type=Text] h3 span span,[data-framer-component-type=Text] h4 span span,[data-framer-component-type=Text] h5 span span,[data-framer-component-type=Text] h6 span span {
+    display: unset
+}
+
+[data-framer-component-type=Text] div div span,[data-framer-component-type=Text] a div span,[data-framer-component-type=Text] span span span,[data-framer-component-type=Text] p span span,[data-framer-component-type=Text] h1 span span,[data-framer-component-type=Text] h2 span span,[data-framer-component-type=Text] h3 span span,[data-framer-component-type=Text] h4 span span,[data-framer-component-type=Text] h5 span span,[data-framer-component-type=Text] h6 span span,[data-framer-component-type=Text] a {
+    font-family: var(--font-family);
+    font-style: var(--font-style);
+    font-weight: min(calc(var(--framer-font-weight-increase, 0) + var(--font-weight, 400)),900);
+    color: var(--text-color);
+    letter-spacing: var(--letter-spacing);
+    font-size: var(--font-size);
+    text-transform: var(--text-transform);
+    text-decoration: var(--text-decoration);
+    line-height: var(--line-height)
+}
+
+[data-framer-component-type=Text] div div span,[data-framer-component-type=Text] a div span,[data-framer-component-type=Text] span span span,[data-framer-component-type=Text] p span span,[data-framer-component-type=Text] h1 span span,[data-framer-component-type=Text] h2 span span,[data-framer-component-type=Text] h3 span span,[data-framer-component-type=Text] h4 span span,[data-framer-component-type=Text] h5 span span,[data-framer-component-type=Text] h6 span span,[data-framer-component-type=Text] a {
+    --font-family: var(--framer-font-family);
+    --font-style: var(--framer-font-style);
+    --font-weight: var(--framer-font-weight);
+    --text-color: var(--framer-text-color);
+    --letter-spacing: var(--framer-letter-spacing);
+    --font-size: var(--framer-font-size);
+    --text-transform: var(--framer-text-transform);
+    --text-decoration: var(--framer-text-decoration);
+    --line-height: var(--framer-line-height)
+}
+
+[data-framer-component-type=Text] a,[data-framer-component-type=Text] a div span,[data-framer-component-type=Text] a span span span,[data-framer-component-type=Text] a p span span,[data-framer-component-type=Text] a h1 span span,[data-framer-component-type=Text] a h2 span span,[data-framer-component-type=Text] a h3 span span,[data-framer-component-type=Text] a h4 span span,[data-framer-component-type=Text] a h5 span span,[data-framer-component-type=Text] a h6 span span {
+    --font-family: var(--framer-link-font-family, var(--framer-font-family));
+    --font-style: var(--framer-link-font-style, var(--framer-font-style));
+    --font-weight: var(--framer-link-font-weight, var(--framer-font-weight));
+    --text-color: var(--framer-link-text-color, var(--framer-text-color));
+    --font-size: var(--framer-link-font-size, var(--framer-font-size));
+    --text-transform: var(--framer-link-text-transform, var(--framer-text-transform));
+    --text-decoration: var(--framer-link-text-decoration, var(--framer-text-decoration))
+}
+
+[data-framer-component-type=Text] a:hover,[data-framer-component-type=Text] a div span:hover,[data-framer-component-type=Text] a span span span:hover,[data-framer-component-type=Text] a p span span:hover,[data-framer-component-type=Text] a h1 span span:hover,[data-framer-component-type=Text] a h2 span span:hover,[data-framer-component-type=Text] a h3 span span:hover,[data-framer-component-type=Text] a h4 span span:hover,[data-framer-component-type=Text] a h5 span span:hover,[data-framer-component-type=Text] a h6 span span:hover {
+    --font-family: var(--framer-link-hover-font-family, var(--framer-link-font-family, var(--framer-font-family)));
+    --font-style: var(--framer-link-hover-font-style, var(--framer-link-font-style, var(--framer-font-style)));
+    --font-weight: var(--framer-link-hover-font-weight, var(--framer-link-font-weight, var(--framer-font-weight)));
+    --text-color: var(--framer-link-hover-text-color, var(--framer-link-text-color, var(--framer-text-color)));
+    --font-size: var(--framer-link-hover-font-size, var(--framer-link-font-size, var(--framer-font-size)));
+    --text-transform: var(--framer-link-hover-text-transform, var(--framer-link-text-transform, var(--framer-text-transform)));
+    --text-decoration: var(--framer-link-hover-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration)))
+}
+
+[data-framer-component-type=Text].isCurrent a,[data-framer-component-type=Text].isCurrent a div span,[data-framer-component-type=Text].isCurrent a span span span,[data-framer-component-type=Text].isCurrent a p span span,[data-framer-component-type=Text].isCurrent a h1 span span,[data-framer-component-type=Text].isCurrent a h2 span span,[data-framer-component-type=Text].isCurrent a h3 span span,[data-framer-component-type=Text].isCurrent a h4 span span,[data-framer-component-type=Text].isCurrent a h5 span span,[data-framer-component-type=Text].isCurrent a h6 span span {
+    --font-family: var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family)));
+    --font-style: var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style)));
+    --font-weight: var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight)));
+    --text-color: var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color)));
+    --font-size: var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size)));
+    --text-transform: var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform)));
+    --text-decoration: var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration)))
+}
+
+p.framer-text,div.framer-text,h1.framer-text,h2.framer-text,h3.framer-text,h4.framer-text,h5.framer-text,h6.framer-text,ol.framer-text,ul.framer-text {
+    margin: 0;
+    padding: 0
+}
+
+p.framer-text,div.framer-text,h1.framer-text,h2.framer-text,h3.framer-text,h4.framer-text,h5.framer-text,h6.framer-text,li.framer-text,ol.framer-text,ul.framer-text,span.framer-text:not([data-text-fill]) {
+    font-family: var(--framer-font-family, Inter, Inter Placeholder, sans-serif);
+    font-style: var(--framer-font-style, normal);
+    font-weight: var(--framer-font-weight, 400);
+    color: var(--framer-text-color, #000);
+    font-size: calc(var(--framer-font-size, 16px) * var(--framer-font-size-scale, 1));
+    letter-spacing: var(--framer-letter-spacing, 0);
+    text-transform: var(--framer-text-transform, none);
+    text-decoration: var(--framer-text-decoration, none);
+    line-height: var(--framer-line-height, 1.2em);
+    text-align: var(--framer-text-alignment, start)
+}
+
+.framer-fit-text .framer-text {
+    white-space: nowrap
+}
+
+strong.framer-text {
+    font-family: var(--framer-font-family-bold);
+    font-style: var(--framer-font-style-bold);
+    font-weight: var(--framer-font-weight-bold, bolder)
+}
+
+em.framer-text {
+    font-family: var(--framer-font-family-italic);
+    font-style: var(--framer-font-style-italic, italic);
+    font-weight: var(--framer-font-weight-italic)
+}
+
+em.framer-text>strong.framer-text {
+    font-family: var(--framer-font-family-bold-italic);
+    font-style: var(--framer-font-style-bold-italic, italic);
+    font-weight: var(--framer-font-weight-bold-italic, bolder)
+}
+
+p.framer-text:not(:first-child),div.framer-text:not(:first-child),h1.framer-text:not(:first-child),h2.framer-text:not(:first-child),h3.framer-text:not(:first-child),h4.framer-text:not(:first-child),h5.framer-text:not(:first-child),h6.framer-text:not(:first-child),ol.framer-text:not(:first-child),ul.framer-text:not(:first-child),.framer-image.framer-text:not(:first-child) {
+    margin-top: var(--framer-paragraph-spacing, 0)
+}
+
+li.framer-text>ul.framer-text:nth-child(2),li.framer-text>ol.framer-text:nth-child(2) {
+    margin-top: 0
+}
+
+.framer-text[data-text-fill] {
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: max(0em,calc(calc(1.3em - var(--framer-line-height, 1.3em)) / 2));
+    margin: min(0em,calc(calc(1.3em - var(--framer-line-height, 1.3em)) / -2))
+}
+
+code.framer-text,code.framer-text span.framer-text:not([data-text-fill]) {
+    font-family: var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));
+    font-style: var(--framer-code-font-style, var(--framer-font-style, normal));
+    font-weight: var(--framer-code-font-weight, var(--framer-font-weight, 400));
+    color: var(--framer-code-text-color, var(--framer-text-color, #000));
+    font-size: calc(var(--framer-font-size, 16px) * var(--framer-font-size-scale, 1));
+    letter-spacing: var(--framer-letter-spacing, 0);
+    line-height: var(--framer-line-height, 1.2em)
+}
+
+a.framer-text,a.framer-text span.framer-text:not([data-text-fill]) {
+    font-family: var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));
+    font-style: var(--framer-link-font-style, var(--framer-font-style, normal));
+    font-weight: var(--framer-link-font-weight, var(--framer-font-weight, 400));
+    color: var(--framer-link-text-color, var(--framer-text-color, #000));
+    font-size: calc(var(--framer-link-font-size, var(--framer-font-size, 16px)) * var(--framer-font-size-scale, 1));
+    text-transform: var(--framer-link-text-transform, var(--framer-text-transform, none));
+    text-decoration: var(--framer-link-text-decoration, var(--framer-text-decoration, none));
+    cursor: var(--framer-custom-cursors, pointer)
+}
+
+code.framer-text a.framer-text,code.framer-text a.framer-text span.framer-text:not([data-text-fill]) {
+    font-family: var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));
+    font-style: var(--framer-code-font-style, var(--framer-font-style, normal));
+    font-weight: var(--framer-code-font-weight, var(--framer-font-weight, 400));
+    color: var(--framer-link-text-color, var(--framer-code-text-color, var(--framer-text-color, #000)));
+    font-size: calc(var(--framer-link-font-size, var(--framer-font-size, 16px)) * var(--framer-font-size-scale, 1))
+}
+
+a.framer-text:hover,a.framer-text:hover span.framer-text:not([data-text-fill]) {
+    font-family: var(--framer-link-hover-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif)));
+    font-style: var(--framer-link-hover-font-style, var(--framer-link-font-style, var(--framer-font-style, normal)));
+    font-weight: var(--framer-link-hover-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400)));
+    color: var(--framer-link-hover-text-color, var(--framer-link-text-color, var(--framer-text-color, #000)));
+    font-size: calc(var(--framer-link-hover-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px))) * var(--framer-font-size-scale, 1));
+    text-transform: var(--framer-link-hover-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none)));
+    text-decoration: var(--framer-link-hover-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none)))
+}
+
+code.framer-text a.framer-text:hover,code.framer-text a.framer-text:hover span.framer-text:not([data-text-fill]) {
+    font-family: var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));
+    font-style: var(--framer-code-font-style, var(--framer-font-style, normal));
+    font-weight: var(--framer-code-font-weight, var(--framer-font-weight, 400));
+    color: var(--framer-link-hover-text-color, var(--framer-link-text-color, var(--framer-code-text-color, var(--framer-text-color, #000))));
+    font-size: calc(var(--framer-link-hover-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px))) * var(--framer-font-size-scale, 1))
+}
+
+a.framer-text[data-framer-page-link-current],a.framer-text[data-framer-page-link-current] span.framer-text:not([data-text-fill]) {
+    font-family: var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif)));
+    font-style: var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style, normal)));
+    font-weight: var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400)));
+    color: var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color, #000)));
+    font-size: calc(var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px))) * var(--framer-font-size-scale, 1));
+    text-transform: var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none)));
+    text-decoration: var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none)))
+}
+
+code.framer-text a.framer-text[data-framer-page-link-current],code.framer-text a.framer-text[data-framer-page-link-current] span.framer-text:not([data-text-fill]) {
+    font-family: var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));
+    font-style: var(--framer-code-font-style, var(--framer-font-style, normal));
+    font-weight: var(--framer-code-font-weight, var(--framer-font-weight, 400));
+    color: var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-code-text-color, var(--framer-text-color, #000))));
+    font-size: calc(var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px))) * var(--framer-font-size-scale, 1))
+}
+
+a.framer-text[data-framer-page-link-current]:hover,a.framer-text[data-framer-page-link-current]:hover span.framer-text:not([data-text-fill]) {
+    font-family: var(--framer-link-hover-font-family, var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif))));
+    font-style: var(--framer-link-hover-font-style, var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style, normal))));
+    font-weight: var(--framer-link-hover-font-weight, var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400))));
+    color: var(--framer-link-hover-text-color, var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color, #000))));
+    font-size: calc(var(--framer-link-hover-font-size, var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px)))) * var(--framer-font-size-scale, 1));
+    text-transform: var(--framer-link-hover-text-transform, var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none))));
+    text-decoration: var(--framer-link-hover-text-decoration, var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none))))
+}
+
+code.framer-text a.framer-text[data-framer-page-link-current]:hover,code.framer-text a.framer-text[data-framer-page-link-current]:hover span.framer-text:not([data-text-fill]) {
+    font-family: var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));
+    font-style: var(--framer-code-font-style, var(--framer-font-style, normal));
+    font-weight: var(--framer-code-font-weight, var(--framer-font-weight, 400));
+    color: var(--framer-link-hover-text-color, var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-code-text-color, var(--framer-text-color, #000)))));
+    font-size: calc(var(--framer-link-hover-font-size, var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px)))) * var(--framer-font-size-scale, 1))
+}
+
+.framer-image.framer-text {
+    display: block;
+    max-width: 100%;
+    height: auto
+}
+
+.text-styles-preset-reset.framer-text {
+    --framer-font-family: Inter, Inter Placeholder, sans-serif;
+    --framer-font-style: normal;
+    --framer-font-weight: 500;
+    --framer-text-color: #000;
+    --framer-font-size: 16px;
+    --framer-letter-spacing: 0;
+    --framer-text-transform: none;
+    --framer-text-decoration: none;
+    --framer-line-height: 1.2em;
+    --framer-text-alignment: start
+}
+
+ol.framer-text {
+    --list-style-type: decimal
+}
+
+ul.framer-text,ol.framer-text {
+    display: table;
+    width: 100%
+}
+
+li.framer-text {
+    display: table-row;
+    counter-increment: list-item;
+    list-style: none
+}
+
+ol.framer-text>li.framer-text:before {
+    display: table-cell;
+    width: 2.25ch;
+    box-sizing: border-box;
+    padding-inline-end:.75ch;content: counter(list-item,var(--list-style-type)) ".";
+    white-space: nowrap
+}
+
+ul.framer-text>li.framer-text:before {
+    display: table-cell;
+    width: 2.25ch;
+    box-sizing: border-box;
+    padding-inline-end:.75ch;content: "\2022"
+}
+
+.framer-text-module[style*=aspect-ratio]>:first-child {
+    width: 100%
+}
+
+@supports not (aspect-ratio: 1) {
+    .framer-text-module[style*=aspect-ratio] {
+        position:relative
+    }
+}
+
+@supports not (aspect-ratio: 1) {
+    .framer-text-module[style*=aspect-ratio]:before {
+        content:"";
+        display: block;
+        padding-bottom: calc(100% / calc(var(--aspect-ratio)))
+    }
+}
+
+@supports not (aspect-ratio: 1) {
+    .framer-text-module[style*=aspect-ratio]>:first-child {
+        position:absolute;
+        top: 0;
+        left: 0;
+        height: 100%
+    }
+}
+
+[data-framer-component-type=DeprecatedRichText] {
+    cursor: inherit
+}
+
+[data-framer-component-type=DeprecatedRichText] .text-styles-preset-reset {
+    --framer-font-family: Inter, Inter Placeholder, sans-serif;
+    --framer-font-style: normal;
+    --framer-font-weight: 500;
+    --framer-text-color: #000;
+    --framer-font-size: 16px;
+    --framer-letter-spacing: 0;
+    --framer-text-transform: none;
+    --framer-text-decoration: none;
+    --framer-line-height: 1.2em;
+    --framer-text-alignment: start
+}
+
+[data-framer-component-type=DeprecatedRichText] p,[data-framer-component-type=DeprecatedRichText] div,[data-framer-component-type=DeprecatedRichText] h1,[data-framer-component-type=DeprecatedRichText] h2,[data-framer-component-type=DeprecatedRichText] h3,[data-framer-component-type=DeprecatedRichText] h4,[data-framer-component-type=DeprecatedRichText] h5,[data-framer-component-type=DeprecatedRichText] h6 {
+    margin: 0;
+    padding: 0
+}
+
+[data-framer-component-type=DeprecatedRichText] p,[data-framer-component-type=DeprecatedRichText] div,[data-framer-component-type=DeprecatedRichText] h1,[data-framer-component-type=DeprecatedRichText] h2,[data-framer-component-type=DeprecatedRichText] h3,[data-framer-component-type=DeprecatedRichText] h4,[data-framer-component-type=DeprecatedRichText] h5,[data-framer-component-type=DeprecatedRichText] h6,[data-framer-component-type=DeprecatedRichText] li,[data-framer-component-type=DeprecatedRichText] ol,[data-framer-component-type=DeprecatedRichText] ul,[data-framer-component-type=DeprecatedRichText] span:not([data-text-fill]) {
+    font-family: var(--framer-font-family, Inter, Inter Placeholder, sans-serif);
+    font-style: var(--framer-font-style, normal);
+    font-weight: var(--framer-font-weight, 400);
+    color: var(--framer-text-color, #000);
+    font-size: var(--framer-font-size, 16px);
+    letter-spacing: var(--framer-letter-spacing, 0);
+    text-transform: var(--framer-text-transform, none);
+    text-decoration: var(--framer-text-decoration, none);
+    line-height: var(--framer-line-height, 1.2em);
+    text-align: var(--framer-text-alignment, start)
+}
+
+[data-framer-component-type=DeprecatedRichText] p:not(:first-child),[data-framer-component-type=DeprecatedRichText] div:not(:first-child),[data-framer-component-type=DeprecatedRichText] h1:not(:first-child),[data-framer-component-type=DeprecatedRichText] h2:not(:first-child),[data-framer-component-type=DeprecatedRichText] h3:not(:first-child),[data-framer-component-type=DeprecatedRichText] h4:not(:first-child),[data-framer-component-type=DeprecatedRichText] h5:not(:first-child),[data-framer-component-type=DeprecatedRichText] h6:not(:first-child),[data-framer-component-type=DeprecatedRichText] ol:not(:first-child),[data-framer-component-type=DeprecatedRichText] ul:not(:first-child),[data-framer-component-type=DeprecatedRichText] .framer-image:not(:first-child) {
+    margin-top: var(--framer-paragraph-spacing, 0)
+}
+
+[data-framer-component-type=DeprecatedRichText] span[data-text-fill] {
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+[data-framer-component-type=DeprecatedRichText] a,[data-framer-component-type=DeprecatedRichText] a span:not([data-text-fill]) {
+    font-family: var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));
+    font-style: var(--framer-link-font-style, var(--framer-font-style, normal));
+    font-weight: var(--framer-link-font-weight, var(--framer-font-weight, 400));
+    color: var(--framer-link-text-color, var(--framer-text-color, #000));
+    font-size: var(--framer-link-font-size, var(--framer-font-size, 16px));
+    text-transform: var(--framer-link-text-transform, var(--framer-text-transform, none));
+    text-decoration: var(--framer-link-text-decoration, var(--framer-text-decoration, none))
+}
+
+[data-framer-component-type=DeprecatedRichText] a:hover,[data-framer-component-type=DeprecatedRichText] a:hover span:not([data-text-fill]) {
+    font-family: var(--framer-link-hover-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif)));
+    font-style: var(--framer-link-hover-font-style, var(--framer-link-font-style, var(--framer-font-style, normal)));
+    font-weight: var(--framer-link-hover-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400)));
+    color: var(--framer-link-hover-text-color, var(--framer-link-text-color, var(--framer-text-color, #000)));
+    font-size: var(--framer-link-hover-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px)));
+    text-transform: var(--framer-link-hover-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none)));
+    text-decoration: var(--framer-link-hover-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none)))
+}
+
+a[data-framer-page-link-current],a[data-framer-page-link-current] span:not([data-text-fill]) {
+    font-family: var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif)));
+    font-style: var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style, normal)));
+    font-weight: var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400)));
+    color: var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color, #000)));
+    font-size: var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px)));
+    text-transform: var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none)));
+    text-decoration: var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none)))
+}
+
+a[data-framer-page-link-current]:hover,a[data-framer-page-link-current]:hover span:not([data-text-fill]) {
+    font-family: var(--framer-link-hover-font-family, var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif))));
+    font-style: var(--framer-link-hover-font-style, var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style, normal))));
+    font-weight: var(--framer-link-hover-font-weight, var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400))));
+    color: var(--framer-link-hover-text-color, var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color, #000))));
+    font-size: var(--framer-link-hover-font-size, var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px))));
+    text-transform: var(--framer-link-hover-text-transform, var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none))));
+    text-decoration: var(--framer-link-hover-text-decoration, var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none))))
+}
+
+[data-framer-component-type=DeprecatedRichText] strong {
+    font-weight: bolder
+}
+
+[data-framer-component-type=DeprecatedRichText] em {
+    font-style: italic
+}
+
+[data-framer-component-type=DeprecatedRichText] .framer-image {
+    display: block;
+    max-width: 100%;
+    height: auto
+}
+
+[data-framer-component-type=DeprecatedRichText] ul,[data-framer-component-type=DeprecatedRichText] ol {
+    display: table;
+    width: 100%;
+    padding-left: 0;
+    margin: 0
+}
+
+[data-framer-component-type=DeprecatedRichText] li {
+    display: table-row;
+    counter-increment: list-item;
+    list-style: none
+}
+
+[data-framer-component-type=DeprecatedRichText] ol>li:before {
+    display: table-cell;
+    width: 2.25ch;
+    box-sizing: border-box;
+    padding-right: .75ch;
+    content: counter(list-item) ".";
+    white-space: nowrap
+}
+
+[data-framer-component-type=DeprecatedRichText] ul>li:before {
+    display: table-cell;
+    width: 2.25ch;
+    box-sizing: border-box;
+    padding-right: .75ch;
+    content: "\2022"
+}
+
+:not([data-framer-generated])>[data-framer-stack-content-wrapper]>*,:not([data-framer-generated])>[data-framer-stack-content-wrapper]>[data-framer-component-type],:not([data-framer-generated])>[data-framer-stack-content-wrapper]>[data-framer-legacy-stack-gap-enabled]>*,:not([data-framer-generated])>[data-framer-stack-content-wrapper]>[data-framer-legacy-stack-gap-enabled]>[data-framer-component-type] {
+    position: relative
+}
+
+.flexbox-gap-not-supported [data-framer-legacy-stack-gap-enabled=true]>*,[data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false] {
+    margin-top: calc(var(--stack-gap-y) / 2);
+    margin-bottom: calc(var(--stack-gap-y) / 2);
+    margin-right: calc(var(--stack-gap-x) / 2);
+    margin-left: calc(var(--stack-gap-x) / 2)
+}
+
+[data-framer-stack-content-wrapper][data-framer-stack-gap-enabled=true] {
+    row-gap: var(--stack-native-row-gap);
+    column-gap: var(--stack-native-column-gap)
+}
+
+.flexbox-gap-not-supported [data-framer-stack-content-wrapper][data-framer-stack-gap-enabled=true] {
+    row-gap: unset;
+    column-gap: unset
+}
+
+.flexbox-gap-not-supported [data-framer-stack-direction-reverse=false] [data-framer-legacy-stack-gap-enabled=true]>*:first-child,[data-framer-stack-direction-reverse=false] [data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false]>*:first-child,.flexbox-gap-not-supported [data-framer-stack-direction-reverse=true] [data-framer-legacy-stack-gap-enabled=true]>*:last-child,[data-framer-stack-direction-reverse=true] [data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false]>*:last-child {
+    margin-top: 0;
+    margin-left: 0
+}
+
+.flexbox-gap-not-supported [data-framer-stack-direction-reverse=false] [data-framer-legacy-stack-gap-enabled=true]>*:last-child,[data-framer-stack-direction-reverse=false] [data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false]>*:last-child,.flexbox-gap-not-supported [data-framer-stack-direction-reverse=true] [data-framer-legacy-stack-gap-enabled=true]>*:first-child,[data-framer-stack-direction-reverse=true] [data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false]>*:first-child {
+    margin-right: 0;
+    margin-bottom: 0
+}
+
+NavigationContainer [data-framer-component-type=NavigationContainer]>*,[data-framer-component-type=NavigationContainer]>[data-framer-component-type] {
+    position: relative
+}
+
+[data-framer-component-type=Scroll]::-webkit-scrollbar {
+    display: none
+}
+
+[data-framer-component-type=ScrollContentWrapper]>* {
+    position: relative
+}
+
+[data-framer-component-type=NativeScroll] {
+    -webkit-overflow-scrolling: touch
+}
+
+[data-framer-component-type=NativeScroll]>* {
+    position: relative
+}
+
+[data-framer-component-type=NativeScroll].direction-both {
+    overflow-x: scroll;
+    overflow-y: scroll
+}
+
+[data-framer-component-type=NativeScroll].direction-vertical {
+    overflow-x: hidden;
+    overflow-y: scroll
+}
+
+[data-framer-component-type=NativeScroll].direction-horizontal {
+    overflow-x: scroll;
+    overflow-y: hidden
+}
+
+[data-framer-component-type=NativeScroll].direction-vertical>* {
+    width: 100%!important
+}
+
+[data-framer-component-type=NativeScroll].direction-horizontal>* {
+    height: 100%!important
+}
+
+[data-framer-component-type=NativeScroll].scrollbar-hidden::-webkit-scrollbar {
+    display: none
+}
+
+[data-framer-component-type=PageContentWrapper]>*,[data-framer-component-type=PageContentWrapper]>[data-framer-component-type] {
+    position: relative
+}
+
+[data-framer-component-type=DeviceComponent].no-device>* {
+    width: 100%!important;
+    height: 100%!important
+}
+
+[data-is-present=false],[data-is-present=false] * {
+    pointer-events: none!important
+}
+
+[data-framer-cursor=pointer] {
+    cursor: pointer
+}
+
+[data-framer-cursor=grab] {
+    cursor: grab
+}
+
+[data-framer-cursor=grab]:active {
+    cursor: grabbing
+}
+
+[data-framer-component-type=Frame] *,[data-framer-component-type=Stack] * {
+    pointer-events: auto
+}
+
+[data-framer-generated] * {
+    pointer-events: unset
+}
+
+.svgContainer svg {
+    display: block
+}
+
+[data-reset=button] {
+    border-width: 0;
+    padding: 0;
+    background: none
+}
+
+[data-hide-scrollbars=true]::-webkit-scrollbar {
+    width: 0px;
+    height: 0px
+}
+
+[data-hide-scrollbars=true]::-webkit-scrollbar-thumb {
+    background: transparent
+}
+
+[data-framer-component-type=Form] input {
+    padding: var(--input-padding)
+}
+
+.framer-cursor-none,.framer-cursor-none * {
+    cursor: none!important
+}
+
+.framer-pointer-events-none,.framer-pointer-events-none * {
+    pointer-events: none!important
+}
+
+.framer-body-augiA20Il-framer-aIIqC {
+    background: rgb(0,0,0)
+}
+
+.framer-aIIqC.framer-lux5qc,.framer-aIIqC .framer-lux5qc {
+    display: block
+}
+
+.framer-aIIqC.framer-72rtr7 {
+    background-color: #000;
+    height: 4516px;
+    overflow: hidden;
+    position: relative;
+    width: 1280px
+}
+
+.framer-aIIqC .framer-vz1qug {
+    flex: none;
+    height: 4518px;
+    left: 0;
+    position: absolute;
+    top: -2px;
+    width: 100%
+}
+
+.framer-aIIqC .framer-1izpo1a-container {
+    flex: none;
+    height: 516px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 1189px
+}
+
+.framer-aIIqC .framer-1wvsg0c-container,.framer-aIIqC .framer-1yueb36-container,.framer-aIIqC .framer-o0pe7m-container,.framer-aIIqC .framer-1whr0yh-container,.framer-aIIqC .framer-3bco9u-container,.framer-aIIqC .framer-1kwpvn-container {
+    height: auto;
+    position: relative;
+    width: auto
+}
+
+.framer-aIIqC .framer-gspod5 {
+    flex: none;
+    height: 887px;
+    left: 0;
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.framer-aIIqC .framer-4whzio {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 32px;
+    height: min-content;
+    justify-content: flex-start;
+    left: 80px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+    width: min-content
+}
+
+.framer-aIIqC .framer-bah2tl {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-aIIqC .framer-112tywj,.framer-aIIqC .framer-1aqa01o,.framer-aIIqC .framer-1ek2t9b,.framer-aIIqC .framer-1ta5se6,.framer-aIIqC .framer-9bmx0l,.framer-aIIqC .framer-gna475,.framer-aIIqC .framer-vo3o7x,.framer-aIIqC .framer-zc52lk,.framer-aIIqC .framer-1effqj7,.framer-aIIqC .framer-b0812p,.framer-aIIqC .framer-1kxbcmu,.framer-aIIqC .framer-um7xje,.framer-aIIqC .framer-mxrkp9,.framer-aIIqC .framer-hz5e3p,.framer-aIIqC .framer-1lvra2b,.framer-aIIqC .framer-1gteetf {
+    flex: none;
+    height: auto;
+    position: relative;
+    white-space: pre;
+    width: auto
+}
+
+.framer-aIIqC .framer-ktz1ck,.framer-aIIqC .framer-a37y15,.framer-aIIqC .framer-94cusy,.framer-aIIqC .framer-mmlh20 {
+    border-radius: 40px;
+    flex: none;
+    height: 72px;
+    position: relative;
+    width: 225px
+}
+
+.framer-aIIqC .framer-3vhsmc,.framer-aIIqC .framer-b052us,.framer-aIIqC .framer-16ygzf5 {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-aIIqC .framer-1oelpnt {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 32px;
+    height: min-content;
+    justify-content: flex-start;
+    left: 48%;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: min-content
+}
+
+.framer-aIIqC .framer-1473373-container {
+    flex: none;
+    height: 80px;
+    left: calc(50.00000000000002% - 100% / 2);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.framer-aIIqC .framer-1oho289 {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 24px;
+    height: min-content;
+    justify-content: flex-start;
+    left: 40px;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    top: 987px;
+    width: min-content
+}
+
+.framer-aIIqC .framer-tkxqkk {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 8px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-aIIqC .framer-vg6y69,.framer-aIIqC .framer-1q4czf4 {
+    --border-bottom-width: 1px;
+    --border-color: #ffffff;
+    --border-left-width: 1px;
+    --border-right-width: 1px;
+    --border-style: solid;
+    --border-top-width: 1px;
+    align-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 1px 2px #1018280d;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8px 14px;
+    position: relative;
+    text-decoration: none;
+    width: 130px;
+    will-change: var(--framer-will-change-override, transform)
+}
+
+.framer-aIIqC .framer-11fr9xr,.framer-aIIqC .framer-bzqgu4,.framer-aIIqC .framer-uzw5q4 {
+    --framer-paragraph-spacing: 14px;
+    flex: none;
+    height: auto;
+    position: relative;
+    white-space: pre;
+    width: auto
+}
+
+.framer-aIIqC .framer-sw9vhr {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 217px;
+    height: min-content;
+    justify-content: flex-start;
+    left: 48%;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    top: 1994px;
+    transform: translate(-50%);
+    width: min-content
+}
+
+.framer-aIIqC .framer-xxeil4 {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 16px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-aIIqC .framer-1tqc5r3 {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0 0 26px;
+    position: relative;
+    width: min-content
+}
+
+.framer-aIIqC .framer-1ttv0on {
+    border-radius: 24px;
+    flex: none;
+    height: 426px;
+    position: relative;
+    width: 110px
+}
+
+.framer-aIIqC .framer-129t004 {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 26px 0 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-aIIqC .framer-esq5ld {
+    border-radius: 24px;
+    flex: none;
+    height: 426px;
+    position: relative;
+    width: 100px
+}
+
+.framer-aIIqC .framer-1okjzjo {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 40px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-aIIqC .framer-10vxocu,.framer-aIIqC .framer-nw8k2b,.framer-aIIqC .framer-htaui3,.framer-aIIqC .framer-iiaexk {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 16px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-aIIqC .framer-gjrunm,.framer-aIIqC .framer-4tz41i {
+    flex: none;
+    height: auto;
+    position: relative;
+    white-space: pre-wrap;
+    width: 632px;
+    word-break: break-word;
+    word-wrap: break-word
+}
+
+.framer-aIIqC .framer-1313sbj {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: min-content;
+    justify-content: space-between;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: 100%
+}
+
+.framer-aIIqC .framer-5ufcjw,.framer-aIIqC .framer-1nx6cv0 {
+    flex: none;
+    height: auto;
+    position: relative;
+    white-space: pre-wrap;
+    width: 300px;
+    word-break: break-word;
+    word-wrap: break-word
+}
+
+.framer-aIIqC .framer-kw6wzx {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 24px;
+    height: min-content;
+    justify-content: flex-start;
+    left: 80px;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    top: 2947px;
+    width: min-content
+}
+
+.framer-aIIqC .framer-5a67rs {
+    flex: none;
+    height: auto;
+    position: relative;
+    white-space: pre-wrap;
+    width: 556px;
+    word-break: break-word;
+    word-wrap: break-word
+}
+
+.framer-aIIqC .framer-1msym7r {
+    --border-bottom-width: 1px;
+    --border-color: #ffffff;
+    --border-left-width: 1px;
+    --border-right-width: 1px;
+    --border-style: solid;
+    --border-top-width: 1px;
+    align-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 1px 2px #1018280d;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8px 14px;
+    position: relative;
+    width: 130px;
+    will-change: var(--framer-will-change-override, transform)
+}
+
+.framer-aIIqC .framer-k25m0s {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 145px;
+    height: min-content;
+    justify-content: flex-start;
+    left: 50%;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    top: 3648px;
+    transform: translate(-50%);
+    width: min-content
+}
+
+.framer-aIIqC .framer-ocwdg3 {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 64px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-aIIqC .framer-iqrmkv {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 8px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: 100%
+}
+
+.framer-aIIqC .framer-1i65vea {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 32px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-aIIqC .framer-lv6ynm-container {
+    flex: none;
+    height: 130px;
+    position: relative;
+    width: 660px
+}
+
+.framer-aIIqC .framer-1w2inf1 {
+    --border-bottom-width: 1px;
+    --border-color: #ffffff;
+    --border-left-width: 1px;
+    --border-right-width: 1px;
+    --border-style: dashed;
+    --border-top-width: 1px;
+    align-content: center;
+    align-items: center;
+    border-radius: 121px;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 24px;
+    height: 225px;
+    justify-content: center;
+    overflow: visible;
+    padding: 40px 32px;
+    position: relative;
+    width: min-content
+}
+
+.framer-aIIqC .framer-b0qqjg {
+    flex: none;
+    height: 32px;
+    position: relative;
+    width: 33px
+}
+
+.framer-aIIqC .framer-10nlqa-container {
+    flex: none;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 4005px
+}
+
+@supports (background: -webkit-named-image(i)) and (not (scale:1)) {
+    .framer-aIIqC .framer-4whzio,.framer-aIIqC .framer-bah2tl,.framer-aIIqC .framer-3vhsmc,.framer-aIIqC .framer-1oelpnt,.framer-aIIqC .framer-b052us,.framer-aIIqC .framer-16ygzf5,.framer-aIIqC .framer-1oho289,.framer-aIIqC .framer-tkxqkk,.framer-aIIqC .framer-vg6y69,.framer-aIIqC .framer-sw9vhr,.framer-aIIqC .framer-xxeil4,.framer-aIIqC .framer-1tqc5r3,.framer-aIIqC .framer-129t004,.framer-aIIqC .framer-1okjzjo,.framer-aIIqC .framer-10vxocu,.framer-aIIqC .framer-nw8k2b,.framer-aIIqC .framer-htaui3,.framer-aIIqC .framer-1q4czf4,.framer-aIIqC .framer-kw6wzx,.framer-aIIqC .framer-iiaexk,.framer-aIIqC .framer-1msym7r,.framer-aIIqC .framer-k25m0s,.framer-aIIqC .framer-ocwdg3,.framer-aIIqC .framer-iqrmkv,.framer-aIIqC .framer-1i65vea,.framer-aIIqC .framer-1w2inf1 {
+        gap:0px
+    }
+
+    .framer-aIIqC .framer-4whzio>*,.framer-aIIqC .framer-1oelpnt>*,.framer-aIIqC .framer-1i65vea>* {
+        margin: 16px 0
+    }
+
+    .framer-aIIqC .framer-4whzio>:first-child,.framer-aIIqC .framer-1oelpnt>:first-child,.framer-aIIqC .framer-1oho289>:first-child,.framer-aIIqC .framer-tkxqkk>:first-child,.framer-aIIqC .framer-1okjzjo>:first-child,.framer-aIIqC .framer-10vxocu>:first-child,.framer-aIIqC .framer-nw8k2b>:first-child,.framer-aIIqC .framer-htaui3>:first-child,.framer-aIIqC .framer-kw6wzx>:first-child,.framer-aIIqC .framer-iiaexk>:first-child,.framer-aIIqC .framer-ocwdg3>:first-child,.framer-aIIqC .framer-iqrmkv>:first-child,.framer-aIIqC .framer-1i65vea>:first-child,.framer-aIIqC .framer-1w2inf1>:first-child {
+        margin-top: 0
+    }
+
+    .framer-aIIqC .framer-4whzio>:last-child,.framer-aIIqC .framer-1oelpnt>:last-child,.framer-aIIqC .framer-1oho289>:last-child,.framer-aIIqC .framer-tkxqkk>:last-child,.framer-aIIqC .framer-1okjzjo>:last-child,.framer-aIIqC .framer-10vxocu>:last-child,.framer-aIIqC .framer-nw8k2b>:last-child,.framer-aIIqC .framer-htaui3>:last-child,.framer-aIIqC .framer-kw6wzx>:last-child,.framer-aIIqC .framer-iiaexk>:last-child,.framer-aIIqC .framer-ocwdg3>:last-child,.framer-aIIqC .framer-iqrmkv>:last-child,.framer-aIIqC .framer-1i65vea>:last-child,.framer-aIIqC .framer-1w2inf1>:last-child {
+        margin-bottom: 0
+    }
+
+    .framer-aIIqC .framer-bah2tl>*,.framer-aIIqC .framer-3vhsmc>*,.framer-aIIqC .framer-b052us>*,.framer-aIIqC .framer-16ygzf5>* {
+        margin: 0 12px
+    }
+
+    .framer-aIIqC .framer-bah2tl>:first-child,.framer-aIIqC .framer-3vhsmc>:first-child,.framer-aIIqC .framer-b052us>:first-child,.framer-aIIqC .framer-16ygzf5>:first-child,.framer-aIIqC .framer-vg6y69>:first-child,.framer-aIIqC .framer-sw9vhr>:first-child,.framer-aIIqC .framer-xxeil4>:first-child,.framer-aIIqC .framer-1tqc5r3>:first-child,.framer-aIIqC .framer-129t004>:first-child,.framer-aIIqC .framer-1q4czf4>:first-child,.framer-aIIqC .framer-1msym7r>:first-child,.framer-aIIqC .framer-k25m0s>:first-child {
+        margin-left: 0
+    }
+
+    .framer-aIIqC .framer-bah2tl>:last-child,.framer-aIIqC .framer-3vhsmc>:last-child,.framer-aIIqC .framer-b052us>:last-child,.framer-aIIqC .framer-16ygzf5>:last-child,.framer-aIIqC .framer-vg6y69>:last-child,.framer-aIIqC .framer-sw9vhr>:last-child,.framer-aIIqC .framer-xxeil4>:last-child,.framer-aIIqC .framer-1tqc5r3>:last-child,.framer-aIIqC .framer-129t004>:last-child,.framer-aIIqC .framer-1q4czf4>:last-child,.framer-aIIqC .framer-1msym7r>:last-child,.framer-aIIqC .framer-k25m0s>:last-child {
+        margin-right: 0
+    }
+
+    .framer-aIIqC .framer-1oho289>*,.framer-aIIqC .framer-kw6wzx>*,.framer-aIIqC .framer-1w2inf1>* {
+        margin: 12px 0
+    }
+
+    .framer-aIIqC .framer-tkxqkk>*,.framer-aIIqC .framer-iqrmkv>* {
+        margin: 4px 0
+    }
+
+    .framer-aIIqC .framer-vg6y69>*,.framer-aIIqC .framer-1q4czf4>*,.framer-aIIqC .framer-1msym7r>* {
+        margin: 0 4px
+    }
+
+    .framer-aIIqC .framer-sw9vhr>* {
+        margin: 0 108.5px
+    }
+
+    .framer-aIIqC .framer-xxeil4>* {
+        margin: 0 8px
+    }
+
+    .framer-aIIqC .framer-1tqc5r3>*,.framer-aIIqC .framer-129t004>* {
+        margin: 0 5px
+    }
+
+    .framer-aIIqC .framer-1okjzjo>* {
+        margin: 20px 0
+    }
+
+    .framer-aIIqC .framer-10vxocu>*,.framer-aIIqC .framer-nw8k2b>*,.framer-aIIqC .framer-htaui3>*,.framer-aIIqC .framer-iiaexk>* {
+        margin: 8px 0
+    }
+
+    .framer-aIIqC .framer-k25m0s>* {
+        margin: 0 72.5px
+    }
+
+    .framer-aIIqC .framer-ocwdg3>* {
+        margin: 32px 0
+    }
+}
+
+@media (min-width: 1280px) {
+    .framer-aIIqC .hidden-72rtr7 {
+        display:none!important
+    }
+}
+
+@media (min-width: 810px) and (max-width: 1279px) {
+    .framer-aIIqC .hidden-15mfahs {
+        display:none!important
+    }
+
+    .framer-body-augiA20Il-framer-aIIqC {
+        background: rgb(0,0,0)
+    }
+
+    .framer-aIIqC.framer-72rtr7 {
+        width: 810px
+    }
+
+    .framer-aIIqC .framer-1izpo1a-container {
+        height: 530px
+    }
+
+    .framer-aIIqC .framer-1oelpnt {
+        left: 47%;
+        top: 255px;
+        transform: translate(-50%)
+    }
+
+    .framer-aIIqC .framer-1oho289 {
+        left: 40px;
+        top: 988px
+    }
+
+    .framer-aIIqC .framer-sw9vhr {
+        gap: 80px;
+        height: 529px;
+        left: calc(49.876543209876566% - 732px / 2);
+        top: 1924px;
+        transform: unset;
+        width: 732px
+    }
+
+    .framer-aIIqC .framer-1okjzjo {
+        flex: 1 0 0px;
+        height: 100%;
+        width: 1px
+    }
+
+    .framer-aIIqC .framer-10vxocu {
+        height: 37%;
+        width: 100%
+    }
+
+    .framer-aIIqC .framer-gjrunm,.framer-aIIqC .framer-nw8k2b,.framer-aIIqC .framer-5ufcjw,.framer-aIIqC .framer-1nx6cv0 {
+        width: 100%
+    }
+
+    .framer-aIIqC .framer-4tz41i {
+        height: 40%;
+        width: 100%
+    }
+
+    .framer-aIIqC .framer-1313sbj {
+        flex: 1 0 0px;
+        flex-direction: column;
+        height: 1px
+    }
+
+    .framer-aIIqC .framer-htaui3 {
+        height: 50%;
+        width: 100%
+    }
+
+    .framer-aIIqC .framer-kw6wzx {
+        top: 2927px
+    }
+
+    .framer-aIIqC .framer-k25m0s {
+        gap: 0px;
+        left: 50%;
+        top: 3562px
+    }
+
+    .framer-aIIqC .framer-ocwdg3,.framer-aIIqC .framer-1i65vea {
+        gap: 40px
+    }
+
+    .framer-aIIqC .framer-lv6ynm-container {
+        width: 442px
+    }
+
+    .framer-aIIqC .framer-1w2inf1 {
+        height: 200px;
+        width: 200px
+    }
+
+    @supports (background: -webkit-named-image(i)) and (not (scale:1)) {
+        .framer-aIIqC .framer-sw9vhr,.framer-aIIqC .framer-1313sbj,.framer-aIIqC .framer-k25m0s,.framer-aIIqC .framer-ocwdg3,.framer-aIIqC .framer-1i65vea {
+            gap:0px
+        }
+
+        .framer-aIIqC .framer-sw9vhr>* {
+            margin: 0 40px
+        }
+
+        .framer-aIIqC .framer-sw9vhr>:first-child,.framer-aIIqC .framer-k25m0s>:first-child {
+            margin-left: 0
+        }
+
+        .framer-aIIqC .framer-sw9vhr>:last-child,.framer-aIIqC .framer-k25m0s>:last-child {
+            margin-right: 0
+        }
+
+        .framer-aIIqC .framer-1313sbj>*,.framer-aIIqC .framer-1313sbj>:first-child,.framer-aIIqC .framer-1313sbj>:last-child {
+            margin: 0
+        }
+
+        .framer-aIIqC .framer-k25m0s>* {
+            margin: 0
+        }
+
+        .framer-aIIqC .framer-ocwdg3>*,.framer-aIIqC .framer-1i65vea>* {
+            margin: 20px 0
+        }
+
+        .framer-aIIqC .framer-ocwdg3>:first-child,.framer-aIIqC .framer-1i65vea>:first-child {
+            margin-top: 0
+        }
+
+        .framer-aIIqC .framer-ocwdg3>:last-child,.framer-aIIqC .framer-1i65vea>:last-child {
+            margin-bottom: 0
+        }
+    }
+}
+
+@media (max-width: 809px) {
+    .framer-aIIqC .hidden-114w6kx {
+        display:none!important
+    }
+
+    .framer-body-augiA20Il-framer-aIIqC {
+        background: rgb(0,0,0)
+    }
+
+    .framer-aIIqC.framer-72rtr7 {
+        height: 4934px;
+        width: 390px
+    }
+
+    .framer-aIIqC .framer-vz1qug {
+        left: calc(50.00000000000002% - 100% / 2);
+        width: 100%
+    }
+
+    .framer-aIIqC .framer-1izpo1a-container {
+        height: 501px;
+        top: 1017px
+    }
+
+    .framer-aIIqC .framer-gspod5 {
+        left: calc(50.00000000000002% - 100% / 2)
+    }
+
+    .framer-aIIqC .framer-1oelpnt {
+        gap: 20px;
+        left: 0;
+        padding: 24px;
+        top: 261px;
+        transform: unset
+    }
+
+    .framer-aIIqC .framer-b052us {
+        align-content: center;
+        align-items: center;
+        gap: 16px;
+        width: 342px
+    }
+
+    .framer-aIIqC .framer-gna475,.framer-aIIqC .framer-vo3o7x {
+        flex: 1 0 0px;
+        white-space: pre-wrap;
+        width: 1px;
+        word-break: break-word;
+        word-wrap: break-word
+    }
+
+    .framer-aIIqC .framer-94cusy,.framer-aIIqC .framer-mmlh20 {
+        height: 39px;
+        width: 121px
+    }
+
+    .framer-aIIqC .framer-16ygzf5 {
+        align-content: center;
+        align-items: center;
+        gap: 8px;
+        width: 342px
+    }
+
+    .framer-aIIqC .framer-zc52lk {
+        align-self: stretch;
+        white-space: pre-wrap;
+        word-break: break-word;
+        word-wrap: break-word
+    }
+
+    .framer-aIIqC .framer-1473373-container {
+        height: auto;
+        left: 50%;
+        transform: translate(-50%)
+    }
+
+    .framer-aIIqC .framer-1oho289 {
+        left: 51%;
+        top: 817px;
+        transform: translate(-50%)
+    }
+
+    .framer-aIIqC .framer-sw9vhr {
+        flex-direction: column;
+        gap: 40px;
+        height: 455px;
+        left: 0;
+        right: 0;
+        top: 1624px;
+        transform: unset;
+        width: unset
+    }
+
+    .framer-aIIqC .framer-xxeil4 {
+        height: 452px;
+        order: 0
+    }
+
+    .framer-aIIqC .framer-1okjzjo {
+        height: 595px;
+        order: 1;
+        padding: 24px;
+        width: 390px
+    }
+
+    .framer-aIIqC .framer-10vxocu {
+        order: 0;
+        width: 100%
+    }
+
+    .framer-aIIqC .framer-gjrunm {
+        order: 0;
+        width: 343px
+    }
+
+    .framer-aIIqC .framer-4tz41i,.framer-aIIqC .framer-1nx6cv0 {
+        order: 1;
+        width: 100%
+    }
+
+    .framer-aIIqC .framer-1313sbj {
+        flex-direction: column;
+        gap: 24px;
+        justify-content: center;
+        order: 1;
+        width: 100%
+    }
+
+    .framer-aIIqC .framer-nw8k2b,.framer-aIIqC .framer-5ufcjw,.framer-aIIqC .framer-htaui3 {
+        width: 100%
+    }
+
+    .framer-aIIqC .framer-um7xje {
+        order: 0
+    }
+
+    .framer-aIIqC .framer-1q4czf4 {
+        order: 2
+    }
+
+    .framer-aIIqC .framer-kw6wzx {
+        left: 51%;
+        top: 2907px;
+        transform: translate(-50%)
+    }
+
+    .framer-aIIqC .framer-5a67rs {
+        width: 347px
+    }
+
+    .framer-aIIqC .framer-k25m0s {
+        flex-direction: column;
+        gap: 200px;
+        top: 3512px;
+        width: 88%
+    }
+
+    .framer-aIIqC .framer-ocwdg3,.framer-aIIqC .framer-1i65vea {
+        gap: 40px;
+        width: 100%
+    }
+
+    .framer-aIIqC .framer-hz5e3p {
+        white-space: pre-wrap;
+        width: 100%;
+        word-break: break-word;
+        word-wrap: break-word
+    }
+
+    .framer-aIIqC .framer-lv6ynm-container {
+        width: 342px
+    }
+
+    .framer-aIIqC .framer-1w2inf1 {
+        height: 200px;
+        width: 200px
+    }
+
+    .framer-aIIqC .framer-10nlqa-container {
+        top: 4233px
+    }
+
+    @supports (background: -webkit-named-image(i)) and (not (scale:1)) {
+        .framer-aIIqC .framer-1oelpnt,.framer-aIIqC .framer-b052us,.framer-aIIqC .framer-16ygzf5,.framer-aIIqC .framer-sw9vhr,.framer-aIIqC .framer-1313sbj,.framer-aIIqC .framer-k25m0s,.framer-aIIqC .framer-ocwdg3,.framer-aIIqC .framer-1i65vea {
+            gap:0px
+        }
+
+        .framer-aIIqC .framer-1oelpnt>* {
+            margin: 10px 0
+        }
+
+        .framer-aIIqC .framer-1oelpnt>:first-child,.framer-aIIqC .framer-sw9vhr>:first-child,.framer-aIIqC .framer-1313sbj>:first-child,.framer-aIIqC .framer-k25m0s>:first-child,.framer-aIIqC .framer-ocwdg3>:first-child,.framer-aIIqC .framer-1i65vea>:first-child {
+            margin-top: 0
+        }
+
+        .framer-aIIqC .framer-1oelpnt>:last-child,.framer-aIIqC .framer-sw9vhr>:last-child,.framer-aIIqC .framer-1313sbj>:last-child,.framer-aIIqC .framer-k25m0s>:last-child,.framer-aIIqC .framer-ocwdg3>:last-child,.framer-aIIqC .framer-1i65vea>:last-child {
+            margin-bottom: 0
+        }
+
+        .framer-aIIqC .framer-b052us>* {
+            margin: 0 8px
+        }
+
+        .framer-aIIqC .framer-b052us>:first-child,.framer-aIIqC .framer-16ygzf5>:first-child {
+            margin-left: 0
+        }
+
+        .framer-aIIqC .framer-b052us>:last-child,.framer-aIIqC .framer-16ygzf5>:last-child {
+            margin-right: 0
+        }
+
+        .framer-aIIqC .framer-16ygzf5>* {
+            margin: 0 4px
+        }
+
+        .framer-aIIqC .framer-sw9vhr>*,.framer-aIIqC .framer-ocwdg3>*,.framer-aIIqC .framer-1i65vea>* {
+            margin: 20px 0
+        }
+
+        .framer-aIIqC .framer-1313sbj>* {
+            margin: 12px 0
+        }
+
+        .framer-aIIqC .framer-k25m0s>* {
+            margin: 100px 0
+        }
+    }
+}
+
+.framer-aIIqC[data-border=true]:after,.framer-aIIqC [data-border=true]:after {
+    content: "";
+    border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0);
+    border-color: var(--border-color, none);
+    border-style: var(--border-style, none);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    border-radius: inherit;
+    pointer-events: none
+}
+
+.framer-rDToF[data-border=true]:after,.framer-rDToF [data-border=true]:after {
+    content: "";
+    border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0);
+    border-color: var(--border-color, none);
+    border-style: var(--border-style, none);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    border-radius: inherit;
+    pointer-events: none
+}
+
+.framer-rDToF.framer-3n6yac,.framer-rDToF .framer-3n6yac {
+    display: block
+}
+
+.framer-rDToF.framer-sg4rgc {
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 16px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-rDToF .framer-1a1usgx {
+    flex: none;
+    height: 181px;
+    position: relative;
+    width: 320px
+}
+
+.framer-rDToF .framer-1vwjgq6 {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 32px;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 16px 16px;
+    position: relative;
+    width: min-content
+}
+
+.framer-rDToF .framer-16qh95j {
+    flex: none;
+    height: 54px;
+    position: relative;
+    white-space: pre-wrap;
+    width: 288px;
+    word-break: break-word;
+    word-wrap: break-word
+}
+
+.framer-rDToF .framer-iltfvx {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 16px;
+    height: 123px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 288px
+}
+
+.framer-rDToF .framer-e1qcwv {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-basis: 0px;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    gap: 12px;
+    height: 1px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%
+}
+
+.framer-rDToF .framer-qy26qw {
+    flex: none;
+    height: 18px;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.framer-rDToF .framer-rxplem {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    height: min-content;
+    justify-content: center;
+    left: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    width: min-content
+}
+
+.framer-rDToF .framer-16hkdyh,.framer-rDToF .framer-1md2z6t {
+    flex: none;
+    height: 18px;
+    position: relative;
+    width: 18px
+}
+
+.framer-rDToF .framer-11pghl1,.framer-rDToF .framer-1gbxfva {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 4px;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-rDToF .framer-hufbfh,.framer-rDToF .framer-1xtfv9g,.framer-rDToF .framer-19ws4zz,.framer-rDToF .framer-1a7oh24,.framer-rDToF .framer-nulgu8,.framer-rDToF .framer-140une8,.framer-rDToF .framer-vv4iu8 {
+    flex: none;
+    height: auto;
+    position: relative;
+    white-space: pre;
+    width: auto
+}
+
+.framer-rDToF .framer-szmiu4 {
+    flex: none;
+    height: 4px;
+    position: relative;
+    width: 4px
+}
+
+.framer-rDToF .framer-11dw60i {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: min-content
+}
+
+.framer-rDToF .framer-4qenje {
+    flex: none;
+    height: 36px;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.framer-rDToF .framer-1oa8eyk {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0px;
+    height: min-content;
+    justify-content: flex-start;
+    left: 0;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    width: min-content
+}
+
+.framer-rDToF .framer-1jxkirb {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: min-content
+}
+
+.framer-rDToF .framer-q7e8gn {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8px 14px;
+    position: relative;
+    width: min-content;
+    will-change: var(--framer-will-change-override, transform)
+}
+
+.framer-rDToF .framer-188km8e {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-rDToF .framer-19ickrl {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px 16px;
+    position: relative;
+    width: min-content;
+    will-change: var(--framer-will-change-override, transform)
+}
+
+@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) {
+    .framer-rDToF.framer-sg4rgc,.framer-rDToF .framer-1vwjgq6,.framer-rDToF .framer-iltfvx,.framer-rDToF .framer-e1qcwv,.framer-rDToF .framer-rxplem,.framer-rDToF .framer-11pghl1,.framer-rDToF .framer-11dw60i,.framer-rDToF .framer-1gbxfva,.framer-rDToF .framer-1oa8eyk,.framer-rDToF .framer-1jxkirb,.framer-rDToF .framer-q7e8gn,.framer-rDToF .framer-188km8e,.framer-rDToF .framer-19ickrl {
+        gap:0px
+    }
+
+    .framer-rDToF.framer-sg4rgc>*,.framer-rDToF .framer-iltfvx>* {
+        margin: 8px 0
+    }
+
+    .framer-rDToF.framer-sg4rgc>:first-child,.framer-rDToF .framer-1vwjgq6>:first-child,.framer-rDToF .framer-iltfvx>:first-child,.framer-rDToF .framer-e1qcwv>:first-child {
+        margin-top: 0
+    }
+
+    .framer-rDToF.framer-sg4rgc>:last-child,.framer-rDToF .framer-1vwjgq6>:last-child,.framer-rDToF .framer-iltfvx>:last-child,.framer-rDToF .framer-e1qcwv>:last-child {
+        margin-bottom: 0
+    }
+
+    .framer-rDToF .framer-1vwjgq6>* {
+        margin: 16px 0
+    }
+
+    .framer-rDToF .framer-e1qcwv>* {
+        margin: 6px 0
+    }
+
+    .framer-rDToF .framer-rxplem>*,.framer-rDToF .framer-11dw60i>*,.framer-rDToF .framer-q7e8gn>*,.framer-rDToF .framer-19ickrl>* {
+        margin: 0 4px
+    }
+
+    .framer-rDToF .framer-rxplem>:first-child,.framer-rDToF .framer-11pghl1>:first-child,.framer-rDToF .framer-11dw60i>:first-child,.framer-rDToF .framer-1gbxfva>:first-child,.framer-rDToF .framer-1oa8eyk>:first-child,.framer-rDToF .framer-1jxkirb>:first-child,.framer-rDToF .framer-q7e8gn>:first-child,.framer-rDToF .framer-188km8e>:first-child,.framer-rDToF .framer-19ickrl>:first-child {
+        margin-left: 0
+    }
+
+    .framer-rDToF .framer-rxplem>:last-child,.framer-rDToF .framer-11pghl1>:last-child,.framer-rDToF .framer-11dw60i>:last-child,.framer-rDToF .framer-1gbxfva>:last-child,.framer-rDToF .framer-1oa8eyk>:last-child,.framer-rDToF .framer-1jxkirb>:last-child,.framer-rDToF .framer-q7e8gn>:last-child,.framer-rDToF .framer-188km8e>:last-child,.framer-rDToF .framer-19ickrl>:last-child {
+        margin-right: 0
+    }
+
+    .framer-rDToF .framer-11pghl1>*,.framer-rDToF .framer-1gbxfva>* {
+        margin: 0 2px
+    }
+
+    .framer-rDToF .framer-1oa8eyk>*,.framer-rDToF .framer-1jxkirb>*,.framer-rDToF .framer-188km8e>* {
+        margin: 0
+    }
+}
+
+@media (pointer: fine) {
+    .framer--carousel[data-show-scrollbar=false]::-webkit-scrollbar {
+        display:none;
+        -webkit-appearance: none;
+        width: 0;
+        height: 0
+    }
+
+    .framer--carousel[data-show-scrollbar=false]::-webkit-scrollbar-thumb {
+        display: none
+    }
+
+    .framer--carousel[data-show-scrollbar=false] {
+        scrollbar-width: none;
+        scrollbar-height: none
+    }
+}
+
+.framer-1kKry.framer-1q45gbz,.framer-1kKry .framer-1q45gbz {
+    display: block
+}
+
+.framer-1kKry.framer-jwsqn2 {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 64px;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 40px 80px;
+    position: relative;
+    width: 1280px
+}
+
+.framer-1kKry .framer-1r7tx6p {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0px;
+    height: 64px;
+    justify-content: center;
+    overflow: visible;
+    padding: 10px 0 10px 10px;
+    position: relative;
+    text-decoration: none;
+    width: 129px
+}
+
+.framer-1kKry .framer-1lxjjh0 {
+    flex: 1 0 0px;
+    height: 44px;
+    position: relative;
+    width: 1px
+}
+
+.framer-1kKry .framer-ap1efa {
+    flex: none;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 40px
+}
+
+.framer-1kKry .framer-7i2yxb {
+    flex: none;
+    height: 2px;
+    left: calc(50.00000000000002% - 20px / 2);
+    overflow: hidden;
+    position: absolute;
+    top: calc(62.50000000000002% - 2px / 2);
+    width: 20px;
+    will-change: var(--framer-will-change-override, transform)
+}
+
+.framer-1kKry .framer-nairrt {
+    flex: none;
+    height: 2px;
+    left: calc(50.00000000000002% - 20px / 2);
+    overflow: hidden;
+    position: absolute;
+    top: calc(37.50000000000002% - 2px / 2);
+    width: 20px;
+    will-change: var(--framer-will-change-override, transform)
+}
+
+.framer-1kKry .framer-hbwx4f {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+    height: min-content;
+    justify-content: center;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-1kKry .framer-17xn3m {
+    flex: none;
+    height: 32px;
+    overflow: visible;
+    position: relative;
+    text-decoration: none;
+    width: 102px
+}
+
+.framer-1kKry .framer-11ey8rh {
+    -webkit-user-select: none;
+    flex: none;
+    height: auto;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    user-select: none;
+    white-space: pre;
+    width: auto
+}
+
+.framer-1kKry .framer-1htwa0z {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8px 14px;
+    position: relative;
+    width: 130px;
+    will-change: var(--framer-will-change-override, transform)
+}
+
+.framer-1kKry .framer-16ri1w5 {
+    flex: none;
+    height: auto;
+    position: relative;
+    white-space: pre;
+    width: auto
+}
+
+@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) {
+    .framer-1kKry .framer-1r7tx6p,.framer-1kKry .framer-hbwx4f,.framer-1kKry .framer-1htwa0z {
+        gap:0px
+    }
+
+    .framer-1kKry .framer-1r7tx6p>* {
+        margin: 0
+    }
+
+    .framer-1kKry .framer-1r7tx6p>:first-child,.framer-1kKry .framer-hbwx4f>:first-child,.framer-1kKry .framer-1htwa0z>:first-child {
+        margin-left: 0
+    }
+
+    .framer-1kKry .framer-1r7tx6p>:last-child,.framer-1kKry .framer-hbwx4f>:last-child,.framer-1kKry .framer-1htwa0z>:last-child {
+        margin-right: 0
+    }
+
+    .framer-1kKry .framer-hbwx4f>* {
+        margin: 0 20px
+    }
+
+    .framer-1kKry .framer-1htwa0z>* {
+        margin: 0 4px
+    }
+}
+
+.framer-1kKry.framer-v-fz3sft.framer-jwsqn2,.framer-1kKry.framer-v-kfc20a.framer-jwsqn2 {
+    flex-direction: column;
+    padding: 24px;
+    width: 390px
+}
+
+.framer-1kKry.framer-v-fz3sft .framer-1r7tx6p {
+    cursor: pointer;
+    gap: unset;
+    height: 20px;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%
+}
+
+.framer-1kKry.framer-v-fz3sft .framer-1lxjjh0,.framer-1kKry.framer-v-kfc20a .framer-1lxjjh0 {
+    flex: none;
+    width: 86px
+}
+
+.framer-1kKry.framer-v-fz3sft .framer-ap1efa,.framer-1kKry.framer-v-ac94ka .framer-ap1efa {
+    height: 44px;
+    width: 44px
+}
+
+@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) {
+    .framer-1kKry.framer-v-fz3sft.framer-jwsqn2,.framer-1kKry.framer-v-fz3sft .framer-1r7tx6p {
+        gap:0px
+    }
+
+    .framer-1kKry.framer-v-fz3sft.framer-jwsqn2>*,.framer-1kKry.framer-v-fz3sft.framer-jwsqn2>:first-child,.framer-1kKry.framer-v-fz3sft.framer-jwsqn2>:last-child,.framer-1kKry.framer-v-fz3sft .framer-1r7tx6p>*,.framer-1kKry.framer-v-fz3sft .framer-1r7tx6p>:first-child,.framer-1kKry.framer-v-fz3sft .framer-1r7tx6p>:last-child {
+        margin: 0
+    }
+}
+
+.framer-1kKry.framer-v-ac94ka.framer-jwsqn2,.framer-1kKry.framer-v-doqc3t.framer-jwsqn2 {
+    flex-direction: column;
+    gap: 0px;
+    height: auto;
+    justify-content: center;
+    max-height: calc(var(--framer-viewport-height, 100vh) * 100);
+    overflow: auto;
+    overscroll-behavior: contain;
+    padding: 24px;
+    width: 390px
+}
+
+.framer-1kKry.framer-v-ac94ka .framer-1r7tx6p {
+    cursor: pointer;
+    gap: unset;
+    justify-content: space-between;
+    padding: 10px;
+    width: 390px
+}
+
+.framer-1kKry.framer-v-ac94ka .framer-1lxjjh0,.framer-1kKry.framer-v-doqc3t .framer-1lxjjh0 {
+    flex: none;
+    width: 97px
+}
+
+.framer-1kKry.framer-v-ac94ka .framer-7i2yxb,.framer-1kKry.framer-v-ac94ka .framer-nairrt,.framer-1kKry.framer-v-doqc3t .framer-7i2yxb,.framer-1kKry.framer-v-doqc3t .framer-nairrt {
+    top: calc(50.00000000000002% - 2px / 2)
+}
+
+.framer-1kKry.framer-v-ac94ka .framer-hbwx4f {
+    flex-direction: column;
+    gap: 24px;
+    justify-content: flex-start;
+    padding: 20px 0;
+    width: 100%
+}
+
+.framer-1kKry.framer-v-ac94ka .framer-1htwa0z,.framer-1kKry.framer-v-doqc3t .framer-1htwa0z {
+    width: 100%
+}
+
+@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) {
+    .framer-1kKry.framer-v-ac94ka.framer-jwsqn2,.framer-1kKry.framer-v-ac94ka .framer-1r7tx6p,.framer-1kKry.framer-v-ac94ka .framer-hbwx4f {
+        gap:0px
+    }
+
+    .framer-1kKry.framer-v-ac94ka.framer-jwsqn2>* {
+        margin: 0
+    }
+
+    .framer-1kKry.framer-v-ac94ka.framer-jwsqn2>:first-child,.framer-1kKry.framer-v-ac94ka .framer-hbwx4f>:first-child {
+        margin-top: 0
+    }
+
+    .framer-1kKry.framer-v-ac94ka.framer-jwsqn2>:last-child,.framer-1kKry.framer-v-ac94ka .framer-hbwx4f>:last-child {
+        margin-bottom: 0
+    }
+
+    .framer-1kKry.framer-v-ac94ka .framer-1r7tx6p>*,.framer-1kKry.framer-v-ac94ka .framer-1r7tx6p>:first-child,.framer-1kKry.framer-v-ac94ka .framer-1r7tx6p>:last-child {
+        margin: 0
+    }
+
+    .framer-1kKry.framer-v-ac94ka .framer-hbwx4f>* {
+        margin: 12px 0
+    }
+}
+
+.framer-1kKry.framer-v-kfc20a .framer-1r7tx6p {
+    cursor: pointer;
+    flex: 1 0 0px;
+    gap: unset;
+    height: 1px;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%
+}
+
+.framer-1kKry.framer-v-kfc20a .framer-ap1efa,.framer-1kKry.framer-v-doqc3t .framer-ap1efa {
+    cursor: pointer;
+    height: 44px;
+    width: 44px
+}
+
+@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) {
+    .framer-1kKry.framer-v-kfc20a.framer-jwsqn2,.framer-1kKry.framer-v-kfc20a .framer-1r7tx6p {
+        gap:0px
+    }
+
+    .framer-1kKry.framer-v-kfc20a.framer-jwsqn2>*,.framer-1kKry.framer-v-kfc20a.framer-jwsqn2>:first-child,.framer-1kKry.framer-v-kfc20a.framer-jwsqn2>:last-child,.framer-1kKry.framer-v-kfc20a .framer-1r7tx6p>*,.framer-1kKry.framer-v-kfc20a .framer-1r7tx6p>:first-child,.framer-1kKry.framer-v-kfc20a .framer-1r7tx6p>:last-child {
+        margin: 0
+    }
+}
+
+.framer-1kKry.framer-v-doqc3t .framer-1r7tx6p {
+    gap: unset;
+    justify-content: space-between;
+    order: 0;
+    padding: 10px;
+    width: 390px
+}
+
+.framer-1kKry.framer-v-doqc3t .framer-hbwx4f {
+    flex-direction: column;
+    gap: 24px;
+    justify-content: flex-start;
+    order: 1;
+    padding: 20px 0;
+    width: 100%
+}
+
+@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) {
+    .framer-1kKry.framer-v-doqc3t.framer-jwsqn2,.framer-1kKry.framer-v-doqc3t .framer-1r7tx6p,.framer-1kKry.framer-v-doqc3t .framer-hbwx4f {
+        gap:0px
+    }
+
+    .framer-1kKry.framer-v-doqc3t.framer-jwsqn2>* {
+        margin: 0
+    }
+
+    .framer-1kKry.framer-v-doqc3t.framer-jwsqn2>:first-child,.framer-1kKry.framer-v-doqc3t .framer-hbwx4f>:first-child {
+        margin-top: 0
+    }
+
+    .framer-1kKry.framer-v-doqc3t.framer-jwsqn2>:last-child,.framer-1kKry.framer-v-doqc3t .framer-hbwx4f>:last-child {
+        margin-bottom: 0
+    }
+
+    .framer-1kKry.framer-v-doqc3t .framer-1r7tx6p>*,.framer-1kKry.framer-v-doqc3t .framer-1r7tx6p>:first-child,.framer-1kKry.framer-v-doqc3t .framer-1r7tx6p>:last-child {
+        margin: 0
+    }
+
+    .framer-1kKry.framer-v-doqc3t .framer-hbwx4f>* {
+        margin: 12px 0
+    }
+}
+
+.framer-1kKry[data-border=true]:after,.framer-1kKry [data-border=true]:after {
+    content: "";
+    border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0);
+    border-color: var(--border-color, none);
+    border-style: var(--border-style, none);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    border-radius: inherit;
+    pointer-events: none
+}
+
+.framer-formspark-input::placeholder {
+    color: var(--framer-formspark-placeholder-color)!important
+}
+
+.ssr-variant {
+    display: contents
+}
+
+@supports (aspect-ratio: 1) {
+    body {
+        --framer-aspect-ratio-supported: auto
+    }
+}
+
+.framer-5ff99.framer-1olm5nk,.framer-5ff99 .framer-1olm5nk {
+    display: block
+}
+
+.framer-5ff99.framer-1d9hutx {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 72px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 40px;
+    position: relative;
+    width: 1280px
+}
+
+.framer-5ff99 .framer-1dnlmd9 {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 80px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-5ff99 .framer-riqwt9,.framer-5ff99 .framer-1it697a,.framer-5ff99 .framer-1ge2ceu,.framer-5ff99 .framer-fnzkyn,.framer-5ff99 .framer-1enn0ok,.framer-5ff99 .framer-l5f9pj,.framer-5ff99 .framer-1ypjhs,.framer-5ff99 .framer-pvc1xg,.framer-5ff99 .framer-1h0p6z8,.framer-5ff99 .framer-1kjnetv,.framer-5ff99 .framer-gjwbx6,.framer-5ff99 .framer-owg6vb {
+    flex: none;
+    height: auto;
+    position: relative;
+    white-space: pre;
+    width: auto
+}
+
+.framer-5ff99 .framer-16fhjr2 {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 213px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-5ff99 .framer-1s4ttc2,.framer-5ff99 .framer-115tpe8,.framer-5ff99 .framer-1oo4q70 {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 8px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-5ff99 .framer-dovgxk {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 46px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-5ff99 .framer-i96t7u {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 32px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-5ff99 .framer-kqeyro,.framer-5ff99 .framer-jjwzsd,.framer-5ff99 .framer-zboyxx {
+    aspect-ratio: 1 / 1;
+    flex: none;
+    height: var(--framer-aspect-ratio-supported, 32px);
+    overflow: hidden;
+    position: relative;
+    width: 32px
+}
+
+.framer-5ff99 .framer-7brv24 {
+    flex: none;
+    inset: 0;
+    position: absolute
+}
+
+.framer-5ff99 .framer-ax2307 {
+    flex: none;
+    inset: 6px 10px 0 9px;
+    position: absolute
+}
+
+.framer-5ff99 .framer-mmonrr {
+    flex: none;
+    height: 32px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 32px
+}
+
+.framer-5ff99 .framer-1f8q0s4 {
+    flex: none;
+    inset: 4px 0 5px;
+    position: absolute
+}
+
+.framer-5ff99 .framer-19exk57 {
+    flex: none;
+    inset: 11px 12px;
+    position: absolute
+}
+
+.framer-5ff99 .framer-12lc0po {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 16px;
+    height: min-content;
+    justify-content: flex-end;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content
+}
+
+.framer-5ff99 .framer-1j6de24 {
+    flex: none;
+    height: 55px;
+    position: relative;
+    width: 118px
+}
+
+@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) {
+    .framer-5ff99.framer-1d9hutx,.framer-5ff99 .framer-1dnlmd9,.framer-5ff99 .framer-16fhjr2,.framer-5ff99 .framer-1s4ttc2,.framer-5ff99 .framer-dovgxk,.framer-5ff99 .framer-115tpe8,.framer-5ff99 .framer-1oo4q70,.framer-5ff99 .framer-i96t7u,.framer-5ff99 .framer-12lc0po {
+        gap:0px
+    }
+
+    .framer-5ff99.framer-1d9hutx>* {
+        margin: 36px 0
+    }
+
+    .framer-5ff99.framer-1d9hutx>:first-child,.framer-5ff99 .framer-1dnlmd9>:first-child,.framer-5ff99 .framer-1s4ttc2>:first-child,.framer-5ff99 .framer-dovgxk>:first-child,.framer-5ff99 .framer-115tpe8>:first-child,.framer-5ff99 .framer-1oo4q70>:first-child,.framer-5ff99 .framer-12lc0po>:first-child {
+        margin-top: 0
+    }
+
+    .framer-5ff99.framer-1d9hutx>:last-child,.framer-5ff99 .framer-1dnlmd9>:last-child,.framer-5ff99 .framer-1s4ttc2>:last-child,.framer-5ff99 .framer-dovgxk>:last-child,.framer-5ff99 .framer-115tpe8>:last-child,.framer-5ff99 .framer-1oo4q70>:last-child,.framer-5ff99 .framer-12lc0po>:last-child {
+        margin-bottom: 0
+    }
+
+    .framer-5ff99 .framer-1dnlmd9>* {
+        margin: 40px 0
+    }
+
+    .framer-5ff99 .framer-16fhjr2>* {
+        margin: 0 106.5px
+    }
+
+    .framer-5ff99 .framer-16fhjr2>:first-child,.framer-5ff99 .framer-i96t7u>:first-child {
+        margin-left: 0
+    }
+
+    .framer-5ff99 .framer-16fhjr2>:last-child,.framer-5ff99 .framer-i96t7u>:last-child {
+        margin-right: 0
+    }
+
+    .framer-5ff99 .framer-1s4ttc2>*,.framer-5ff99 .framer-115tpe8>*,.framer-5ff99 .framer-1oo4q70>* {
+        margin: 4px 0
+    }
+
+    .framer-5ff99 .framer-dovgxk>* {
+        margin: 23px 0
+    }
+
+    .framer-5ff99 .framer-i96t7u>* {
+        margin: 0 16px
+    }
+
+    .framer-5ff99 .framer-12lc0po>* {
+        margin: 8px 0
+    }
+}
+
+.framer-5ff99.framer-v-n133we.framer-1d9hutx {
+    width: 810px
+}
+
+.framer-5ff99.framer-v-n133we .framer-16fhjr2 {
+    gap: 67px
+}
+
+@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) {
+    .framer-5ff99.framer-v-n133we .framer-16fhjr2 {
+        gap:0px
+    }
+
+    .framer-5ff99.framer-v-n133we .framer-16fhjr2>* {
+        margin: 0 33.5px
+    }
+
+    .framer-5ff99.framer-v-n133we .framer-16fhjr2>:first-child {
+        margin-left: 0
+    }
+
+    .framer-5ff99.framer-v-n133we .framer-16fhjr2>:last-child {
+        margin-right: 0
+    }
+}
+
+.framer-5ff99.framer-v-1gr29d8.framer-1d9hutx,.framer-5ff99.framer-v-140hxx8.framer-1d9hutx {
+    gap: 56px;
+    padding: 24px;
+    width: 390px
+}
+
+.framer-5ff99.framer-v-1gr29d8 .framer-1dnlmd9,.framer-5ff99.framer-v-140hxx8 .framer-1dnlmd9 {
+    gap: 56px;
+    width: 100%
+}
+
+.framer-5ff99.framer-v-1gr29d8 .framer-riqwt9,.framer-5ff99.framer-v-140hxx8 .framer-riqwt9 {
+    white-space: pre-wrap;
+    width: 100%;
+    word-break: break-word;
+    word-wrap: break-word
+}
+
+.framer-5ff99.framer-v-1gr29d8 .framer-16fhjr2,.framer-5ff99.framer-v-140hxx8 .framer-16fhjr2 {
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 48px;
+    width: 100%
+}
+
+@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) {
+    .framer-5ff99.framer-v-1gr29d8.framer-1d9hutx,.framer-5ff99.framer-v-1gr29d8 .framer-1dnlmd9,.framer-5ff99.framer-v-1gr29d8 .framer-16fhjr2 {
+        gap:0px
+    }
+
+    .framer-5ff99.framer-v-1gr29d8.framer-1d9hutx>*,.framer-5ff99.framer-v-1gr29d8 .framer-1dnlmd9>* {
+        margin: 28px 0
+    }
+
+    .framer-5ff99.framer-v-1gr29d8.framer-1d9hutx>:first-child,.framer-5ff99.framer-v-1gr29d8 .framer-1dnlmd9>:first-child,.framer-5ff99.framer-v-1gr29d8 .framer-16fhjr2>:first-child {
+        margin-top: 0
+    }
+
+    .framer-5ff99.framer-v-1gr29d8.framer-1d9hutx>:last-child,.framer-5ff99.framer-v-1gr29d8 .framer-1dnlmd9>:last-child,.framer-5ff99.framer-v-1gr29d8 .framer-16fhjr2>:last-child {
+        margin-bottom: 0
+    }
+
+    .framer-5ff99.framer-v-1gr29d8 .framer-16fhjr2>* {
+        margin: 24px 0
+    }
+}
+
+@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) {
+    .framer-5ff99.framer-v-140hxx8.framer-1d9hutx,.framer-5ff99.framer-v-140hxx8 .framer-1dnlmd9,.framer-5ff99.framer-v-140hxx8 .framer-16fhjr2 {
+        gap:0px
+    }
+
+    .framer-5ff99.framer-v-140hxx8.framer-1d9hutx>*,.framer-5ff99.framer-v-140hxx8 .framer-1dnlmd9>* {
+        margin: 28px 0
+    }
+
+    .framer-5ff99.framer-v-140hxx8.framer-1d9hutx>:first-child,.framer-5ff99.framer-v-140hxx8 .framer-1dnlmd9>:first-child,.framer-5ff99.framer-v-140hxx8 .framer-16fhjr2>:first-child {
+        margin-top: 0
+    }
+
+    .framer-5ff99.framer-v-140hxx8.framer-1d9hutx>:last-child,.framer-5ff99.framer-v-140hxx8 .framer-1dnlmd9>:last-child,.framer-5ff99.framer-v-140hxx8 .framer-16fhjr2>:last-child {
+        margin-bottom: 0
+    }
+
+    .framer-5ff99.framer-v-140hxx8 .framer-16fhjr2>* {
+        margin: 24px 0
+    }
+}
